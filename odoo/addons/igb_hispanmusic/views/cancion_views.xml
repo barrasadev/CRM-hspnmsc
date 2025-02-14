@@ -1,7 +1,13 @@
 <odoo>
+    <record id="action_cancion_tree" model="ir.actions.act_window">
+        <field name="name">Canciones</field>
+        <field name="res_model">igb_hispanmusic.cancion</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <record id="view_cancion_form" model="ir.ui.view">
-        <field name="name">hispanmusic.cancion.form</field>
-        <field name="model">hispanmusic.cancion</field>
+        <field name="name">igb_hispanmusic.cancion.form</field>
+        <field name="model">igb_hispanmusic.cancion</field>
         <field name="arch" type="xml">
             <form string="Canción">
                 <sheet>
@@ -22,8 +28,8 @@
     </record>
 
     <record id="view_cancion_tree" model="ir.ui.view">
-        <field name="name">hispanmusic.cancion.tree</field>
-        <field name="model">hispanmusic.cancion</field>
+        <field name="name">igb_hispanmusic.cancion.tree</field>
+        <field name="model">igb_hispanmusic.cancion</field>
         <field name="arch" type="xml">
             <tree string="Canciones">
                 <field name="nombre"/>

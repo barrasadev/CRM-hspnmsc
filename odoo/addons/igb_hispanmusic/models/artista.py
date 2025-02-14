@@ -1,4 +1,3 @@
-# Path: odoo/addons/igb_hispanmusic/models/artista.py
 from odoo import models, fields
 
 class Artista(models.Model):
@@ -10,7 +9,7 @@ class Artista(models.Model):
     foto = fields.Image(string='Foto')
     telefono = fields.Char(string='Teléfono')
     email = fields.Char(string='Email')
-    canciones_ids = fields.Many2many('hispanmusic.cancion', string='Canciones')
+    canciones_ids = fields.Many2many('igb_hispanmusic.cancion', string='Canciones')
     spotify = fields.Char(string='Spotify')
     youtube = fields.Char(string='YouTube')
     instagram = fields.Char(string='Instagram')
