@@ -6,7 +6,7 @@ class Artista(models.Model):
 
     nombre_real = fields.Char(string='Nombre Real', required=True)
     nombre_artistico = fields.Char(string='Nombre Artístico', required=True)
-    foto = fields.Image(string='Foto')
+    foto = fields.Image(string='Foto', required=True)
     telefono = fields.Char(string='Teléfono')
     email = fields.Char(string='Email')
     canciones_ids = fields.Many2many('igb_hispanmusic.cancion', string='Canciones')
