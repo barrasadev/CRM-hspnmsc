@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_hispanmusic_artista_admin,Access Artistas,model_igb_hispanmusic_artista,igb_hispanmusic.group_hispanmusic_admin,1,1,1,1
 access_hispanmusic_cancion_admin,Access Canciones,model_igb_hispanmusic_cancion,igb_hispanmusic.group_hispanmusic_admin,1,1,1,1
+access_hispanmusic_artista_marketing,Access Artistas Marketing,model_igb_hispanmusic_artista,igb_hispanmusic.group_hispanmusic_marketing,1,0,0,0
+access_hispanmusic_cancion_marketing,Access Canciones Marketing,model_igb_hispanmusic_cancion,igb_hispanmusic.group_hispanmusic_marketing,1,0,0,0
