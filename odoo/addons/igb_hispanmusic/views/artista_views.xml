@@ -12,26 +12,29 @@
         <field name="arch" type="xml">
             <form string="Artista">
                 <sheet>
-                    <group col="3">
-                        <group col="2">
-                            <group>
-                                <field name="nombre_real" colspan="2" width="100%"/>
-                                <field name="nombre_artistico" colspan="2" width="100%"/>
-                                <field name="telefono" width="100%"/>
-                                <field name="email" width="100%"/>
+                    <group col="3" style="width: 100%;">
+                        <!-- Información Principal -->
+                        <group col="2" style="width: 75%;">
+                            <group style="width: 100%;">
+                                <field name="nombre_real" colspan="2" style="width: 100%;"/>
+                                <field name="nombre_artistico" colspan="2" style="width: 100%;"/>
+                                <field name="telefono" style="width: 100%;"/>
+                                <field name="email" style="width: 100%;"/>
                             </group>
-                            <group>
-                                <field name="spotify" width="100%"/>
-                                <field name="youtube" width="100%"/>
-                                <field name="instagram" width="100%"/>
-                                <field name="applemusic" width="100%"/>
+                            <group style="width: 100%;">
+                                <field name="spotify" style="width: 100%;"/>
+                                <field name="youtube" style="width: 100%;"/>
+                                <field name="instagram" style="width: 100%;"/>
+                                <field name="applemusic" style="width: 100%;"/>
                             </group>
                         </group>
-                        <group align="center">
-                            <field name="foto" widget="image" class="oe_avatar" options="{'size': [100, 100]}"/>
+                        <!-- Imagen alineada a la derecha -->
+                        <group style="width: 25%; display: flex; justify-content: flex-end; align-items: center;">
+                            <field name="foto" widget="image" class="oe_avatar" options="{'size': [200, 200]}" style="max-width: 200px; max-height: 200px; border-radius: 10px; border: 2px solid #ccc;"/>
                         </group>
                     </group>
-                    <group string="Canciones">
+                    <!-- Sección de Canciones -->
+                    <group string="Canciones" style="width: 100%;">
                         <field name="canciones_ids">
                             <tree editable="bottom">
                                 <field name="nombre"/>
