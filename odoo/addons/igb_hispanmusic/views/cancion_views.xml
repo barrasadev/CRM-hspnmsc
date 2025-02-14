@@ -2,7 +2,7 @@
     <record id="action_cancion_tree" model="ir.actions.act_window">
         <field name="name">Canciones</field>
         <field name="res_model">igb_hispanmusic.cancion</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,kanban</field>
     </record>
 
     <record id="view_cancion_form" model="ir.ui.view">
@@ -27,15 +27,47 @@
         </field>
     </record>
 
+    <!-- Vista Tree -->
     <record id="view_cancion_tree" model="ir.ui.view">
         <field name="name">igb_hispanmusic.cancion.tree</field>
         <field name="model">igb_hispanmusic.cancion</field>
         <field name="arch" type="xml">
             <tree string="Canciones">
+                <field name="portada" widget="image" options="{'size': [100, 100]}"/>
                 <field name="nombre"/>
-                <field name="spotify"/>
-                <field name="youtube"/>
             </tree>
+        </field>
+    </record>
+
+    <!-- Vista Kanban -->
+    <record id="view_cancion_kanban" model="ir.ui.view">
+        <field name="name">igb_hispanmusic.cancion.kanban</field>
+        <field name="model">igb_hispanmusic.cancion</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <!-- Contenedor clickeable -->
+                        <div class="oe_kanban_card oe_kanban_global_click" t-att-data-id="record.id.raw_value"
+                             style="border: 1px solid #ddd; border-radius: 10px; padding: 10px; text-align: center; width: 220px; background: #f9f9f9; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); cursor: pointer;">
+
+                            <!-- Portada de la cancion -->
+                            <div style="margin-bottom: 10px;">
+                                <img t-att-src="kanban_image('igb_hispanmusic.cancion', 'portada', record.id.raw_value)"
+                                     class="oe_kanban_image"
+                                     style="width:100px;height:100px; border-radius: 50%; border: 2px solid #ccc;"/>
+                            </div>
+
+                            <!-- Información de la cancion -->
+                            <div>
+                                <ul style="list-style: none; padding: 0; text-align: left;">
+                                    <li><strong>Nombre:</strong> <field name="nombre"/></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
 </odoo>
