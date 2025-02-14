@@ -1,9 +1,7 @@
 <odoo>
     <menuitem id="menu_hispanmusic_artistas_root" name="Artistas" sequence="10" groups="igb_hispanmusic.group_hispanmusic_admin"/>
 
-    <menuitem id="menu_artistas" name="Artistas" parent="menu_hispanmusic_artistas_root" sequence="20"/>
-    <menuitem id="menu_artistas_list" name="Todos los Artistas" parent="menu_artistas" action="action_artista_tree"/>
+    <menuitem id="menu_artistas" name="Artistas" parent="menu_hispanmusic_artistas_root" sequence="20" action="action_artista_tree" groups="igb_hispanmusic.group_hispanmusic_admin"/>
 
-    <menuitem id="menu_canciones" name="Canciones" parent="menu_hispanmusic_artistas_root" sequence="30"/>
-    <menuitem id="menu_canciones_list" name="Todas las Canciones" parent="menu_canciones" action="action_cancion_tree"/>
+    <menuitem id="menu_canciones" name="Canciones" parent="menu_hispanmusic_artistas_root" sequence="30" action="action_cancion_tree" groups="igb_hispanmusic.group_hispanmusic_admin"/>
 </odoo>

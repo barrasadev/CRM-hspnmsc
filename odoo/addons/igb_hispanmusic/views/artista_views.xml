@@ -12,11 +12,13 @@
             <form string="Artista">
                 <sheet>
                     <group>
-                        <group>
+                        <group col="3">
                             <field name="nombre_real"/>
                             <field name="nombre_artistico"/>
                             <field name="telefono"/>
                             <field name="email"/>
+                        </group>
+                        <group col="3">
                             <field name="spotify"/>
                             <field name="youtube"/>
                             <field name="instagram"/>
