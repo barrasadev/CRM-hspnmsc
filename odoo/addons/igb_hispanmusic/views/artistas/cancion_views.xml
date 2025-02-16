@@ -1,3 +1,11 @@
+<!--
+  Author: Ivan Gonzalez Barrasa (barrasa.dev)
+  File: cancion_views.xml
+  Path: ~/Proyectos/HispanMusic/CRM-hspnmsc/odoo/addons/igb_hispanmusic/views
+  Created: 2025-02-14 15:52
+  Last Updated: 2025-02-14 15:52
+-->
+
 <odoo>
     <record id="action_cancion_tree" model="ir.actions.act_window">
         <field name="name">Canciones</field>

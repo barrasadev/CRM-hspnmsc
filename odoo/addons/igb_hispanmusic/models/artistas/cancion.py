@@ -1,3 +1,9 @@
+# Author: Ivan Gonzalez Barrasa (barrasa.dev)
+# File: cancion.py
+# Path: ~/Proyectos/HispanMusic/CRM-hspnmsc/odoo/addons/igb_hispanmusic/models
+# Created: 2025-02-14 15:51
+# Last Updated: 2025-02-14 15:51
+
 from odoo import models, fields
 
 class Cancion(models.Model):

@@ -1,3 +1,9 @@
+# Author: Ivan Gonzalez Barrasa (barrasa.dev)
+# File: __manifest__.py
+# Path: ~/Proyectos/HispanMusic/CRM-hspnmsc/odoo/addons/igb_hispanmusic
+# Created: 2025-02-14 15:52
+# Last Updated: 2025-02-14 15:52
+
 {
     'name': "HispanMusic",
     'summary': "Gestión de artistas musicales",
@@ -9,9 +15,12 @@
     'depends': ['base'],
     'data': [
         'security/hispanmusic_security.xml',
-        'views/artista_views.xml',
-        'views/cancion_views.xml',
-        'views/menu.xml',
+        'views/artistas/artista_views.xml',
+        'views/artistas/cancion_views.xml',
+        'views/campanas/tipo_campana_playlist_views.xml',
+        'views/campanas/tipo_campana_web_views.xml',
+        'views/artistas/menu.xml',
+        'views/campanas/menu.xml',
         'security/ir.model.access.csv',
     ],
     'installable': True,

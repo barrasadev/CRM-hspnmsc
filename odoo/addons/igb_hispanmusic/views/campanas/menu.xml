@@ -1,0 +1,30 @@
+<!--
+  Author: Ivan Gonzalez Barrasa (barrasa.dev)
+  File: menu-campanas.xml
+  Path: ~/Proyectos/HispanMusic/CRM-hspnmsc/odoo/addons/igb_hispanmusic/views
+  Created: 2025-02-16 19:16
+  Last Updated: 2025-02-16 19:16
+-->
+
+<odoo>
+
+    <menuitem id="menu_hispanmusic_campanas_root" name="Campañas" sequence="40"
+    groups="igb_hispanmusic.group_hispanmusic_admin,igb_hispanmusic.group_hispanmusic_marketing"/>
+
+    <menuitem id="menu_campanas_playlists" name="Playlists"
+        parent="menu_hispanmusic_campanas_root" sequence="50"
+        groups="igb_hispanmusic.group_hispanmusic_admin,igb_hispanmusic.group_hispanmusic_marketing"/>
+
+    <menuitem id="menu_campanas_web" name="Página Web"
+        parent="menu_hispanmusic_campanas_root" sequence="60"
+        groups="igb_hispanmusic.group_hispanmusic_admin,igb_hispanmusic.group_hispanmusic_marketing"/>
+
+    <menuitem id="menu_tipo_campana_playlist" name="Tipos de Campaña (Playlists)"
+        parent="menu_campanas_playlists" action="action_tipo_campana_playlist_tree"
+        groups="igb_hispanmusic.group_hispanmusic_admin,igb_hispanmusic.group_hispanmusic_marketing"/>
+
+    <menuitem id="menu_tipo_campana_web" name="Tipos de Campaña (Página Web)"
+        parent="menu_campanas_web" action="action_tipo_campana_web_tree"
+        groups="igb_hispanmusic.group_hispanmusic_admin,igb_hispanmusic.group_hispanmusic_marketing"/>
+
+</odoo>

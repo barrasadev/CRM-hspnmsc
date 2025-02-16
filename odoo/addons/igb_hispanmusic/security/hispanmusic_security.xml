@@ -1,3 +1,11 @@
+<!--
+  Author: Ivan Gonzalez Barrasa (barrasa.dev)
+  File: hispanmusic_security.xml
+  Path: ~/Proyectos/HispanMusic/CRM-hspnmsc/odoo/addons/igb_hispanmusic/security
+  Created: 2025-02-14 15:51
+  Last Updated: 2025-02-14 15:51
+-->
+
 <odoo>
     <data noupdate="1">
         <record id="group_hispanmusic_admin" model="res.groups">

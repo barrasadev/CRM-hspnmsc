@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import cancion
-from . import artista
+from . import artistas
+from . import campanas
