@@ -25,7 +25,7 @@
             <tree string="Transacciones">
                 <field name="fecha"/>
                 <field name="artista_id"/>
-                <field name="tipo_transaccion"/>
+                <field name="tipo_transaccion" decoration-danger="tipo_transaccion == 'retiro'" decoration-success="tipo_transaccion == 'ingreso'"/>
                 <field name="importe"/>
                 <field name="mensaje"/>
             </tree>
