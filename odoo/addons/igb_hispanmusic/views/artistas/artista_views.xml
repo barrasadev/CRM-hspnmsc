@@ -26,10 +26,12 @@
                             <group string="Informacion" style="width: 100%;">
                                 <field name="nombre_real" colspan="2" style="width: 100%;"/>
                                 <field name="nombre_artistico" colspan="2" style="width: 100%;"/>
+                                <field name="email" style="width: 100%;"/>
+                            </group>
+                            <group string="Contacto" style="width: 100%;">
                                 <field name="telefono" style="width: 100%;"/>
                                 <field name="telegram" style="width: 100%;"/>
                                 <field name="instagram" style="width: 100%;"/>
-                                <field name="email" style="width: 100%;"/>
                             </group>
                             <group string="Redes" style="width: 100%;">
                                 <field name="spotify" style="width: 100%;"/>

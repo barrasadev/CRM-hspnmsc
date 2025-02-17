@@ -1,3 +1,11 @@
+<!--
+  Author: Ivan Gonzalez Barrasa (barrasa.dev)
+  File: transaccion_views.xml
+  Path: ~/Proyectos/HispanMusic/CRM-hspnmsc/odoo/addons/igb_hispanmusic/views/artistas
+  Created: 2025-02-17 12:12
+  Last Updated: 2025-02-17 12:12
+-->
+
 <odoo>
     <!-- Acción para abrir la lista de transacciones -->
     <record id="action_transaccion_tree" model="ir.actions.act_window">
