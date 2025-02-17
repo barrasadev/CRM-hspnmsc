@@ -1,0 +1,53 @@
+<odoo>
+    <!-- Acción para abrir la vista de campañas de playlists -->
+    <record id="action_playlist_campana_tree" model="ir.actions.act_window">
+        <field name="name">Campañas de Playlist</field>
+        <field name="res_model">igb_hispanmusic.playlist_campana</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Vista Tree (Lista) -->
+    <record id="view_playlist_campana_tree" model="ir.ui.view">
+        <field name="name">igb_hispanmusic.playlist_campana.tree</field>
+        <field name="model">igb_hispanmusic.playlist_campana</field>
+        <field name="arch" type="xml">
+            <tree string="Campañas de Playlist">
+                <field name="artista_id"/>
+                <field name="cancion_id"/>
+                <field name="tipo_campana_id"/>
+                <field name="fecha_inicio"/>
+                <field name="estado"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Form (Formulario) -->
+    <record id="view_playlist_campana_form" model="ir.ui.view">
+        <field name="name">igb_hispanmusic.playlist_campana.form</field>
+        <field name="model">igb_hispanmusic.playlist_campana</field>
+        <field name="arch" type="xml">
+            <form string="Campaña de Playlist">
+                <sheet>
+                    <group col="3">
+                        <group>
+                            <field name="cancion_id" options="{'no_create': True}"/>
+                            <field name="tipo_campana_id" options="{'no_create': True}"/>
+                            <field name="fecha_inicio"/>
+                            <field name="estado"/>
+                        </group>
+                        <group>
+                            <field name="followers_user"/>
+                            <field name="artista_id" readonly="1"/>
+                            <field name="reproducciones_cancion"/>
+                        </group>
+                        <group>
+                            <field name="playlists"/>
+                            <field name="cant_playlist"/>
+                            <field name="followers_playlist"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
