@@ -1,0 +1,49 @@
+<odoo>
+    <!-- Acción para abrir la lista de transacciones -->
+    <record id="action_transaccion_tree" model="ir.actions.act_window">
+        <field name="name">Transacciones</field>
+        <field name="res_model">igb_hispanmusic.transaccion</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>Aquí puedes gestionar las transacciones de los artistas.</p>
+        </field>
+    </record>
+
+    <!-- Vista Tree -->
+    <record id="view_transaccion_tree" model="ir.ui.view">
+        <field name="name">igb_hispanmusic.transaccion.tree</field>
+        <field name="model">igb_hispanmusic.transaccion</field>
+        <field name="arch" type="xml">
+            <tree string="Transacciones">
+                <field name="fecha"/>
+                <field name="artista_id"/>
+                <field name="tipo_transaccion"/>
+                <field name="importe"/>
+                <field name="mensaje"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Form -->
+    <record id="view_transaccion_form" model="ir.ui.view">
+        <field name="name">igb_hispanmusic.transaccion.form</field>
+        <field name="model">igb_hispanmusic.transaccion</field>
+        <field name="arch" type="xml">
+            <form string="Transacción">
+                <sheet>
+                    <group>
+                        <field name="artista_id"/>
+                        <field name="fecha" readonly="1"/>
+                        <field name="tipo_transaccion"/>
+                        <field name="importe"/>
+                        <field name="mensaje"/>
+                    </group>
+                    <footer>
+                        <button string="Guardar" type="object" name="create"/>
+                        <button string="Cancelar" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -19,6 +19,7 @@
         'views/artistas/cancion_views.xml',
         'views/campanas/tipo_campana_playlist_views.xml',
         'views/campanas/tipo_campana_web_views.xml',
+        'views/artistas/transaccion_views.xml',
         'views/artistas/menu.xml',
         'views/campanas/menu.xml',
         'security/ir.model.access.csv',
