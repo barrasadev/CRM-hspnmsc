@@ -13,8 +13,8 @@
             <field name="category_id" ref="base.module_category_hidden"/>
         </record>
 
-        <record id="saldogroup_hispanmusic_userg" model="res.groups">
-            <field name="name">Usuario de HispanMusic</field>
+        <record id="group_hispanmusic_usuario" model="res.groups">
+            <field name="name">Usuario General de HispanMusic</field>
             <field name="category_id" ref="base.module_category_hidden"/>
         </record>
     </data>

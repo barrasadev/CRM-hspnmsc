@@ -1,3 +1,9 @@
+# Author: Ivan Gonzalez Barrasa (barrasa.dev)
+# File: transaccion.py
+# Path: ~/Proyectos/HispanMusic/CRM-hspnmsc/odoo/addons/igb_hispanmusic/models/artistas
+# Created: 2025-02-17 13:04
+# Last Updated: 2025-02-17 13:04
+
 from odoo import models, fields, api
 
 class Transaccion(models.Model):
