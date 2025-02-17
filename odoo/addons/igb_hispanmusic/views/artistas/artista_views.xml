@@ -20,9 +20,9 @@
         <field name="arch" type="xml">
             <form string="Artista">
                 <sheet>
-                    <group col="3" style="width: 100%;">
+                    <group col="4" style="width: 100%;">
                         <!-- Información Principal -->
-                        <group col="2" style="width: 75%;">
+                        <group col="3" style="width: 75%;">
                             <group string="Informacion" style="width: 100%;">
                                 <field name="nombre_real" colspan="2" style="width: 100%;"/>
                                 <field name="nombre_artistico" colspan="2" style="width: 100%;"/>
@@ -64,6 +64,18 @@
                         </field>
                     </group>
 
+                    <!-- 🔹 Nueva Sección: Campañas de Spotify -->
+                    <group string="Campañas de Spotify" style="width: 100%;">
+                        <field name="campanas_spotify_ids" options="{'no_create': True}">
+                            <tree>
+                                <field name="cancion_id"/>
+                                <field name="tipo_campana_id"/>
+                                <field name="fecha_inicio"/>
+                                <field name="estado"/>
+                            </tree>
+                        </field>
+                    </group>
+
                     <!-- 🔹 Nueva Sección: Transacciones -->
                     <group string="Transacciones" style="width: 100%;">
                         <field name="transacciones_ids" readonly="1">
@@ -80,7 +92,6 @@
             </form>
         </field>
     </record>
-
     <!-- Vista Tree -->
     <record id="view_artista_tree" model="ir.ui.view">
         <field name="name">igb_hispanmusic.artista.tree</field>

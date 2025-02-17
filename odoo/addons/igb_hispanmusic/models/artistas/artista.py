@@ -35,6 +35,12 @@ class Artista(models.Model):
         digits=(10, 2)
     )
 
+    campanas_spotify_ids = fields.One2many(
+        'igb_hispanmusic.playlist_campana',
+        'artista_id',
+        string="Campañas de Spotify"
+    )
+
     transacciones_ids = fields.One2many(
         'igb_hispanmusic.transaccion',
         'artista_id',
