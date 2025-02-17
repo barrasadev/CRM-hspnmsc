@@ -49,7 +49,7 @@
                             <field name="referido_por_id" options="{'always_reload': True}" />
                         </group>
                         <group style="width: 50%;">
-                            <field name="saldo"/>
+                            <field name="saldo" readonly="1"/>
                         </group>
                     </group>
 
