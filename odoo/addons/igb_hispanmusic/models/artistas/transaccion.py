@@ -1,16 +1,10 @@
-# Author: Ivan Gonzalez Barrasa (barrasa.dev)
-# File: transaccion.py
-# Path: ~/Proyectos/HispanMusic/CRM-hspnmsc/odoo/addons/igb_hispanmusic/models/artistas
-# Created: 2025-02-17 12:11
-# Last Updated: 2025-02-17 12:11
-
-from odoo import models, fields
+from odoo import models, fields, api
 
 class Transaccion(models.Model):
     _name = 'igb_hispanmusic.transaccion'
     _description = 'Registro de Transacciones'
-    _order = 'fecha desc'
     _rec_name = 'mensaje'
+    _order = 'fecha desc'
 
     artista_id = fields.Many2one(
         'igb_hispanmusic.artista',
@@ -26,3 +20,15 @@ class Transaccion(models.Model):
     importe = fields.Float(string="Importe", required=True)
     mensaje = fields.Char(string="Mensaje", required=True)
     fecha = fields.Datetime(string="Fecha", default=fields.Datetime.now, readonly=True)
+
+    @api.model
+    def create(self, vals):
+        """ Sobreescribe create para actualizar el saldo del artista """
+        transaccion = super(Transaccion, self).create(vals)
+
+        if transaccion.tipo_transaccion == 'ingreso':
+            transaccion.artista_id.saldo += transaccion.importe
+        elif transaccion.tipo_transaccion == 'retiro':
+            transaccion.artista_id.saldo -= transaccion.importe
+
+        return transaccion

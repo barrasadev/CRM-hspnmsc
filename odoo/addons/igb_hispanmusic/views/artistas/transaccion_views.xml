@@ -40,7 +40,7 @@
             <form string="Transacción">
                 <sheet>
                     <group>
-                        <field name="artista_id"/>
+                        <field name="artista_id" options="{'no_create': True}"/>
                         <field name="fecha" readonly="1"/>
                         <field name="tipo_transaccion"/>
                         <field name="importe"/>
