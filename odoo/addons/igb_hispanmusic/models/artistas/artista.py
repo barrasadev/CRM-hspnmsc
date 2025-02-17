@@ -34,3 +34,9 @@ class Artista(models.Model):
         default=0.0,
         digits=(10, 2)
     )
+
+    transacciones_ids = fields.One2many(
+        'igb_hispanmusic.transaccion',
+        'artista_id',
+        string="Transacciones"
+    )

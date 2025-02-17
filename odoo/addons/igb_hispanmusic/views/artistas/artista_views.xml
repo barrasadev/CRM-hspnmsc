@@ -63,11 +63,23 @@
                             </tree>
                         </field>
                     </group>
+
+                    <!-- 🔹 Nueva Sección: Transacciones -->
+                    <group string="Transacciones" style="width: 100%;">
+                        <field name="transacciones_ids" readonly="1">
+                            <tree>
+                                <field name="fecha"/>
+                                <field name="tipo_transaccion" decoration-danger="tipo_transaccion == 'retiro'" decoration-success="tipo_transaccion == 'ingreso'"/>
+                                <field name="importe"/>
+                                <field name="mensaje"/>
+                            </tree>
+                        </field>
+                    </group>
+
                 </sheet>
             </form>
         </field>
     </record>
-
 
     <!-- Vista Tree -->
     <record id="view_artista_tree" model="ir.ui.view">
