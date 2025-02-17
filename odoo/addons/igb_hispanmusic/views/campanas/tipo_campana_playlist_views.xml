@@ -29,9 +29,6 @@
                             <field name="seguidores"/>
                             <field name="reproducciones"/>
                         </group>
-                        <group>
-                            <field name="imagen" widget="image" class="oe_avatar" options="{'size': [200, 200]}"/>
-                        </group>
                     </group>
                 </sheet>
             </form>
@@ -43,7 +40,6 @@
         <field name="model">igb_hispanmusic.tipo_campana_playlist</field>
         <field name="arch" type="xml">
             <tree string="Tipos de Campaña - Playlist">
-                <field name="imagen" widget="image" options="{'size': [100, 100]}"/>
                 <field name="nombre"/>
                 <field name="precio"/>
                 <field name="coste"/>
