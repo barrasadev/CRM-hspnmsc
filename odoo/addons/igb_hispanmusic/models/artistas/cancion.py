@@ -9,6 +9,7 @@ from odoo import models, fields
 class Cancion(models.Model):
     _name = 'igb_hispanmusic.cancion'
     _description = 'Canción Musical'
+    _rec_name = 'nombre'
 
     nombre = fields.Char(string='Nombre', required=True)
     portada = fields.Image(string='Portada')
