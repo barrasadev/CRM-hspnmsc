@@ -64,7 +64,6 @@
                         </field>
                     </group>
 
-                    <!-- 🔹 Nueva Sección: Campañas de Spotify -->
                     <group string="Campañas de Spotify" style="width: 100%;">
                         <field name="campanas_spotify_ids" options="{'no_create': True}" readonly="1">
                             <tree>
@@ -76,7 +75,6 @@
                         </field>
                     </group>
 
-                    <!-- 🔹 Nueva Sección: Transacciones -->
                     <group string="Transacciones" style="width: 100%;">
                         <field name="transacciones_ids" readonly="1">
                             <tree>
