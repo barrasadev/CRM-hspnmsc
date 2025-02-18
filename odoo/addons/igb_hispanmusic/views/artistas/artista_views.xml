@@ -66,7 +66,7 @@
 
                     <!-- 🔹 Nueva Sección: Campañas de Spotify -->
                     <group string="Campañas de Spotify" style="width: 100%;">
-                        <field name="campanas_spotify_ids" options="{'no_create': True}">
+                        <field name="campanas_spotify_ids" options="{'no_create': True}" readonly="1">
                             <tree>
                                 <field name="cancion_id"/>
                                 <field name="tipo_campana_id"/>
